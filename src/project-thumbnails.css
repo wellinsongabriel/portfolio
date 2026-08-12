@@ -1,0 +1,33 @@
+.project-thumbnail {
+    position: relative;
+    display: block;
+    margin: -25px -25px 20px;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    text-decoration: none
+}
+
+.project-thumbnail img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    opacity: .82;
+    transition: transform .25s, opacity .25s
+}
+
+.project-thumbnail:hover img {
+    transform: scale(1.04);
+    opacity: .62
+}
+
+.project-thumbnail span {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background: #131313dd;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font: 600 10px 'JetBrains Mono'
+}

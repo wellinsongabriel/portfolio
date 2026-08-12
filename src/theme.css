@@ -1,0 +1,158 @@
+:root,
+body,
+.topbar,
+.terminal,
+.card,
+.tinted,
+.project-controls input,
+.filters button,
+.tags span,
+.terminal-top,
+footer,
+.project-thumbnail span {
+    transition: background-color .22s ease, color .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid #ffffff2c;
+    border-radius: 7px;
+    background: transparent;
+    color: #e5e2e1;
+    cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+    background: #ffffff12;
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 2px solid #9ddf2e;
+    outline-offset: 3px;
+}
+
+.small {
+    justify-content: center;
+    padding: 10px 13px;
+}
+
+:root[data-theme='light'] {
+    color: #20242b;
+    background: #fafafa;
+}
+
+:root[data-theme='light'] .topbar {
+    background: #ffffffe8;
+    border-color: #1b27331a;
+}
+
+:root[data-theme='light'] .brand,
+:root[data-theme='light'] .topbar a {
+    color: #20242b;
+}
+
+:root[data-theme='light'] .topbar nav a,
+:root[data-theme='light'] .lead,
+:root[data-theme='light'] .section-intro,
+:root[data-theme='light'] .card p,
+:root[data-theme='light'] .contact>p {
+    color: #52606d;
+}
+
+:root[data-theme='light'] h1,
+:root[data-theme='light'] h2,
+:root[data-theme='light'] h3 {
+    color: #17202b;
+}
+
+:root[data-theme='light'] h1 em,
+:root[data-theme='light'] .folder,
+:root[data-theme='light'] .product-icon {
+    color: #286cc5;
+}
+
+:root[data-theme='light'] .ghost,
+:root[data-theme='light'] .project>a,
+:root[data-theme='light'] .text-link,
+:root[data-theme='light'] footer a,
+:root[data-theme='light'] .theme-toggle-btn {
+    color: #263445;
+    border-color: #26344538;
+}
+
+:root[data-theme='light'] .theme-toggle-btn:hover {
+    background: #26344510;
+}
+
+:root[data-theme='light'] .terminal,
+:root[data-theme='light'] .card {
+    background: linear-gradient(145deg, #ffffff, #f0f3f6);
+    border-color: #2634451c;
+    box-shadow: 0 18px 45px #24354a18;
+}
+
+:root[data-theme='light'] .terminal-top,
+:root[data-theme='light'] .project-controls input {
+    background: #e7ebf0;
+}
+
+:root[data-theme='light'] .terminal-top span,
+:root[data-theme='light'] .card small,
+:root[data-theme='light'] footer {
+    color: #617182;
+}
+
+:root[data-theme='light'] .terminal code {
+    color: #415164;
+}
+
+:root[data-theme='light'] .tinted {
+    background: #edf1f5;
+}
+
+:root[data-theme='light'] .project-controls input {
+    color: #17202b;
+    border-color: #9aa8b8;
+}
+
+:root[data-theme='light'] .filters button {
+    color: #405064;
+    background: #fff;
+    border-color: #aab5c1;
+}
+
+:root[data-theme='light'] .filters .active {
+    background: #5b3595;
+    color: #fff;
+    border-color: #5b3595;
+}
+
+:root[data-theme='light'] .tags span {
+    color: #354456;
+    background: #dce3ea;
+}
+
+:root[data-theme='light'] .project-thumbnail span {
+    background: #fffffff0;
+    color: #17202b;
+}
+
+@media (max-width: 760px) {
+    .topbar-actions {
+        gap: 0;
+    }
+
+    .theme-toggle-btn {
+        width: 38px;
+        height: 38px;
+    }
+}

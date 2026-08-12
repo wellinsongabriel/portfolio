@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+:root {
+    color: #e5e2e1;
+    background: #131313;
+    font-family: Inter, Arial, sans-serif;
+    scroll-behavior: smooth
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+.topbar {
+    height: 76px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(24px, calc((100% - 1200px)/2));
+    background: #131313e8;
+    border-bottom: 1px solid #ffffff12;
+    backdrop-filter: blur(18px)
+}
+
+.brand,
+.topbar a {
+    color: #e5e2e1;
+    text-decoration: none
+}
+
+.brand,
+.topbar .contatar {
+    color: #1c1c1c;
+    text-decoration: none
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espaçamento entre o ícone e o nome */
+  color: var(--text-primary);
+  font: 700 16px 'JetBrains Mono';
+  text-decoration: none;
+}
+
+/* Garante que o ícone assuma a cor verde/destaque do tema */
+.brand .brand-icon {
+  color: var(--accent);
+}
+
+.brand span,
+.eyebrow {
+    color: #9ddf2e
+}
+
+.topbar nav {
+    display: flex;
+    gap: 25px
+}
+
+.topbar nav a {
+    font: 500 13px 'JetBrains Mono';
+    color: #c2c6d6
+}
+
+.topbar nav a:hover,
+.text-link {
+    color: #b2f746
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 24px
+}
+
+.hero {
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 70px;
+    align-items: center
+}
+
+.eyebrow,
+small {
+    font: 600 11px 'JetBrains Mono';
+    letter-spacing: .12em
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'JetBrains Mono';
+    margin: 0;
+    color: #f4f1ef
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -.07em
+}
+
+h1 em {
+    color: #adc6ff;
+    font-style: normal
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    letter-spacing: -.05em
+}
+
+.lead,
+.section-intro,
+.card p,
+.contact>p {
+    color: #c2c6d6;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 660px
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px
+}
+
+.button {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    background: #9ddf2e;
+    color: #162300;
+    text-decoration: none;
+    border: 0;
+    border-radius: 7px;
+    padding: 13px 18px;
+    font: 700 12px 'JetBrains Mono';
+    cursor: pointer
+}
+
+.button:hover {
+    background: #b2f746;
+    transform: translateY(-2px)
+}
+
+.compact {
+    padding: 10px 13px;
+    font-size: 11px
+}
+
+.ghost {
+    color: #e5e2e1;
+    background: transparent;
+    border: 1px solid #ffffff2c
+}
+
+.button.ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e2e1;
+  border-color: #9ddf2e;
+}
+
+.terminal,
+.card {
+    background: linear-gradient(145deg, #242323, #181818);
+    border: 1px solid #ffffff15;
+    border-radius: 14px;
+    box-shadow: 0 20px 65px #0006
+}
+
+.terminal {
+    overflow: hidden
+}
+
+.terminal-top {
+    height: 46px;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 16px
+}
+
+.terminal-top i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #535252
+}
+
+.terminal-top i:first-child {
+    background: #ee6a5f
+}
+
+.terminal-top i:nth-child(2) {
+    background: #f5bd4f
+}
+
+.terminal-top i:nth-child(3) {
+    background: #61c554
+}
+
+.terminal-top span {
+    margin-left: 10px;
+    color: #8c909f;
+    font: 11px 'JetBrains Mono'
+}
+
+.terminal code {
+    display: block;
+    padding: 28px;
+    color: #c2c6d6;
+    font: 14px/2 'JetBrains Mono'
+}
+
+.terminal b {
+    color: #adc6ff
+}
+
+.terminal s {
+    color: #9ddf2e;
+    text-decoration: none
+}
+
+.terminal strong {
+    color: #e9a9ff
+}
+
+.tinted {
+    max-width: none;
+    background: #1c1b1b
+}
+
+.tinted>* {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.project-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 38px 0 24px
+}
+
+.project-controls input {
+    width: 280px;
+    background: #0e0e0e;
+    border: 1px solid #424754;
+    border-radius: 7px;
+    padding: 12px;
+    color: white;
+    font: 13px Inter
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.filters button {
+    border: 1px solid #424754;
+    color: #c2c6d6;
+    background: #201f1f;
+    border-radius: 30px;
+    padding: 9px 13px;
+    cursor: pointer;
+    font: 11px 'JetBrains Mono'
+}
+
+.filters .active {
+    background: #e2b6ff;
+    color: #00285d;
+    border-color: #e2b6ff;
+}
+
+.cards {
+    display: grid;
+    gap: 20px
+}
+
+.projects {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.videos {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.products {
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between
+}
+
+.folder,
+.product-icon {
+    font-size: 28px;
+    color: #adc6ff
+}
+
+.card small {
+    color: #8c909f
+}
+
+.card h3 {
+    font-size: 19px;
+    margin: 22px 0 6px
+}
+
+.card p {
+    font-size: 14px;
+    margin: 7px 0 22px;
+    flex: 1
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 23px
+}
+
+.tags span {
+    color: #e5e2e1;
+    background: #353534;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font: 10px 'JetBrains Mono'
+}
+
+.project>a,
+.text-link {
+    font: 600 12px 'JetBrains Mono';
+    text-decoration: none;
+    color: #e5e2e1
+}
+
+.video {
+    padding: 0;
+    overflow: hidden
+}
+
+.video h3,
+.video p {
+    margin-left: 22px;
+    margin-right: 22px
+}
+
+.video p {
+    margin-bottom: 22px
+}
+
+.video-frame {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000
+}
+
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0
+}
+
+.product .actions {
+    margin-top: 0
+}
+
+.text-link {
+    padding: 10px 0
+}
+
+.contact {
+    text-align: center;
+    padding: 120px 24px
+}
+
+.contact>p {
+    margin: 18px auto 0
+}
+
+.contact .actions {
+    justify-content: center
+}
+
+footer {
+    border-top: 1px solid #ffffff0d;
+    max-width: none;
+    padding: 35px max(24px, calc((100% - 1200px)/2));
+    display: flex;
+    justify-content: space-between;
+    color: #8c909f;
+    font: 11px 'JetBrains Mono'
+}
+
+footer div {
+    display: flex;
+    gap: 18px
+}
+
+footer a {
+    color: #c2c6d6;
+    text-decoration: none
+}
+
+/* Miniatura dentro do Card de Produtos */
+.product .project-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.product .project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product .project-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+.product .project-thumbnail span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font: 600 11px 'JetBrains Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.product .card-head {
+  margin-bottom: 8px;
+}
+
+.product .purchase-links {
+  margin-bottom: 12px;
+}
+
+@media(max-width:760px) {
+    .topbar {
+        padding: 0 18px
+    }
+
+    .topbar nav {
+        display: none
+    }
+
+    .topbar .compact {
+        display: none
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 65px
+    }
+
+    .section {
+        padding: 70px 20px
+    }
+
+    .projects,
+    .videos,
+    .products {
+        grid-template-columns: 1fr
+    }
+
+    .project-controls {
+        align-items: stretch;
+        flex-direction: column
+    }
+
+    .project-controls input {
+        width: 100%
+    }
+
+    .terminal code {
+        font-size: 12px;
+        padding: 20px
+    }
+
+    footer {
+        padding: 25px 20px;
+        flex-direction: column;
+        gap: 18px
+    }
+}
